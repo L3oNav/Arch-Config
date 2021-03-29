@@ -19,6 +19,11 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "h", lazy.layout.left()),
     ([mod], "l", lazy.layout.right()),
 
+    ([mod], "Down", lazy.layout.down()),
+    ([mod], "Up", lazy.layout.up()),
+    ([mod], "Left", lazy.layout.left()),
+    ([mod], "Right", lazy.layout.right()),
+
     # Change window sizes (MonadTall)
     ([mod, "shift"], "l", lazy.layout.grow()),
     ([mod, "shift"], "h", lazy.layout.shrink()),
@@ -35,7 +40,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod, "shift"], "Tab", lazy.prev_layout()),
 
     # Kill window
-    ([mod], "w", lazy.window.kill()),
+    ([mod], "q", lazy.window.kill()),
 
     # Switch focus of monitors
     ([mod], "period", lazy.next_screen()),
@@ -50,7 +55,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     # ------------ App Configs ------------
 
     # Menu
-    ([mod], "m", lazy.spawn("rofi -show drun")),
+    ([mod], "space", lazy.spawn("rofi -show drun")),
 
     # Window Nav
     ([mod, "shift"], "m", lazy.spawn("rofi -show")),
@@ -62,7 +67,7 @@ keys = [Key(key[0], key[1], *key[2:]) for key in [
     ([mod], "e", lazy.spawn("pcmanfm")),
 
     # Terminal
-    ([mod], "Return", lazy.spawn("alacritty")),
+    ([mod], "Return", lazy.spawn("kitty")),
 
     # Redshift
     ([mod], "r", lazy.spawn("redshift -O 2400")),
